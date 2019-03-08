@@ -1,0 +1,12 @@
+.text_table{
+  background: #fff;
+  .table_row{
+    .row_cont{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

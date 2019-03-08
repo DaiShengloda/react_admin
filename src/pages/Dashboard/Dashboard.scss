@@ -1,0 +1,97 @@
+.dashboard{
+  min-height: 100vh;
+  .dash_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    .header_ins{
+      display: flex;
+      align-items: center;
+      height: 60px;
+      padding-left: 20px;
+      .ins_logo{
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin-right: 8px;
+      }
+      .ins_name{
+        font-size: 20px;
+        color: #1890ff;
+      }
+    }
+    .header_user{
+      display: flex;
+      align-items: center;
+      height: 60px;
+      color: #fff;
+      padding-right: 30px;
+      font-size: 20px;
+      .user_icon{
+        margin-right: 10px;
+      }
+      .user_name{
+        font-size: 24px;
+      }
+    }
+  }
+  .dash_cont{
+    .cont_sider{
+      background: #002140;
+      .sider_menu{
+        background: #002140;
+      }
+    }
+    .cont_table{
+      background: #efeff5;
+      .table_cont{  
+        .cont_bread{
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          font-size: 16px;
+          background: #e6e6e6;
+          padding-left: 20px;
+          .bread_item{
+
+          }
+        }
+        .cont_view{
+          padding: 20px;
+        }
+      }
+      .table_footer{
+        background: #fff;
+        height: 48px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+.fade-appear {}
+.fade-appear-active {}
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+.fade-exit {
+  opacity: 0;
+}
+.fade-exit-active {
+  opacity: 0;
+}
