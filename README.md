@@ -1,6 +1,6 @@
 # React
 > 后台管理系统 [项目地址](http://api.cf69.com/static/adminHtml/index.html)
-用户名：admin 密码：admin
+> 用户名：admin 密码：admin
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
