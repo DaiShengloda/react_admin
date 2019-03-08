@@ -4,7 +4,7 @@
  */
 import React, { Component } from 'react'
 import { Switch, Route, Link, withRouter } from 'react-router-dom'
-import { Layout, Menu, Breadcrumb, Icon } from 'antd'
+import { Layout, Menu, Breadcrumb, Icon, Popover, Button, message } from 'antd'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import './Dashboard.scss'
 import Index from '../Index/Index'
@@ -59,6 +59,14 @@ class _Dashboard extends Component {
     this.props.history.push(object.key)
   }
 
+  loginOut = () => {
+    const closeBack = () => {
+      localStorage.removeItem('loginIn')
+      this.props.history.push('/login')
+    }
+    message.loading('加载中...', 1, closeBack)
+  }
+
   render() {
     const { location } = this.props
     const pathSnippets = location.pathname.split('/').filter(i => i)
@@ -91,7 +99,17 @@ class _Dashboard extends Component {
             <Icon 
               type="user" 
               className='user_icon'/>
-            <div className='user_name'>admin</div>
+            <Popover
+              trigger="click"
+              placement="bottomRight"
+              content={
+                <Button
+                  type="primary"
+                  onClick={this.loginOut}
+                  icon="logout"
+                  size="small">退出登录</Button>}>
+              <div className='user_name'>admin</div>
+            </Popover>
           </div>
         </Header>
         {/* 下排 */}
